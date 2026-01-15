@@ -9,7 +9,7 @@ public class Main {
                 "   ***",
                 "  *****",
                 " *******",
-                "*********"
+                "*********",
         });
         String b = String.join("\n", new String[]{
                 "       *",
@@ -19,11 +19,11 @@ public class Main {
                 "   *********",
                 "  ***********",
                 " *************",
-                "***************"
+                "***************",
         });
 
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        sc.nextInt();
         System.out.println(sc.hasNextInt() ? a + "\n\n" + b : a);
     }
 }

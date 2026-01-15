@@ -9,8 +9,7 @@ public class Main {
         double height = sc.nextDouble();
         double bmi = weight / (height * height);
 
-        boolean validation = height > 0 && height < 2.72
-                && weight > 0 && weight < 727;
+        boolean validation = weight > 0 && weight < 727 && height > 0 && height < 2.72;
         if (!validation) System.out.println("input out of range");
         else if (bmi < 18.5) System.out.println("thin");
         else if (bmi < 24) System.out.println("fit");

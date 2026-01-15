@@ -9,11 +9,10 @@ public class Main {
             double a = sc.nextDouble();
             double b = sc.nextDouble();
             double c = sc.nextDouble();
-            if (a + b > c) {
-                double p = (a + b + c) / 2;
-                double s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-                System.out.printf("%.2f", s);
-            } else System.out.println("Input Error!");
+            double p = (a + b + c) / 2;
+            double s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+            if (a + b > c) System.out.printf("%.2f\n", s);
+            else System.out.println("Input Error!");
         }
     }
 }

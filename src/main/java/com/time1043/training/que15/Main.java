@@ -9,6 +9,7 @@ public class Main {
         int b = sc.nextInt();
         int c = sc.nextInt();
         int d = sc.nextInt();
-        System.out.println(Math.abs(a - c) + Math.abs(b - d));
+        int distance = Math.abs(a - c) + Math.abs(b - d);
+        System.out.println(distance);
     }
 }
