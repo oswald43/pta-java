@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String[] numbers = {
+        String[] triangle = {
                 "1   ",
                 "1   1   ",
                 "1   2   1   ",
@@ -17,13 +17,13 @@ public class Main {
                 "1   9   36  84  126 126 84  36  9   1   ",
                 "1   10  45  120 210 252 210 120 45  10  1   ",
                 "1   11  55  165 330 462 462 330 165 55  11  1   ",
-                "1   12  66  220 495 792 924 792 495 220 66  12  1   ",
+                "1   12  66  220 495 792 924 792 495 220 66  12  1   "
         };
 
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
-            System.out.println(numbers[i]);
+            System.out.println(triangle[i]);
         }
     }
 }

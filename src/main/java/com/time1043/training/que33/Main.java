@@ -5,16 +5,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double maxWeight = sc.nextDouble();
-        double a = sc.nextDouble();
-        double b = sc.nextDouble();
+        double weightMax = Double.parseDouble(sc.nextLine());
+        double w1 = sc.nextDouble();
+        double w2 = sc.nextDouble();
 
-        if (a + b > maxWeight) {
-            System.out.printf("目前共装载了%.1f吨货物\n", a);
-            System.out.printf("无法再装载重量是%.1f吨的集装箱\n", b);
+        if (w1 + w2 > weightMax) {
+            System.out.printf("目前共装载了%.1f吨货物\n", w1);
+            System.out.printf("无法再装载重量是%.1f吨的集装箱\n", w2);
         } else {
-            System.out.printf("目前共装载了%.1f吨货物\n", a);
-            System.out.printf("目前共装载了%.1f吨货物\n", a + b);
+            System.out.printf("目前共装载了%.1f吨货物\n", w1);
+            System.out.printf("目前共装载了%.1f吨货物\n", w1 + w2);
         }
         System.out.println("货船将正点起航");
     }

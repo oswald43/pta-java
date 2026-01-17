@@ -5,19 +5,19 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        int n = Integer.parseInt(sc.nextLine());
 
-        ArrayList<PersonSortable2> array = new ArrayList<>();
+        ArrayList<PersonSortable2> people = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            array.add(new PersonSortable2(sc.next(), sc.nextInt()));
+            people.add(new PersonSortable2(sc.next(), sc.nextInt()));
         }
 
         System.out.println("NameComparator:sort");
-        Collections.sort(array, new NameComparator());
-        array.forEach(System.out::println);
+        Collections.sort(people, new NameComparator());
+        people.forEach(System.out::println);
         System.out.println("AgeComparator:sort");
-        Collections.sort(array, new AgeComparator());
-        array.forEach(System.out::println);
+        Collections.sort(people, new AgeComparator());
+        people.forEach(System.out::println);
 
         System.out.println(Arrays.toString(NameComparator.class.getInterfaces()));
         System.out.println(Arrays.toString(AgeComparator.class.getInterfaces()));
@@ -49,6 +49,6 @@ class NameComparator implements Comparator<PersonSortable2> {
 class AgeComparator implements Comparator<PersonSortable2> {
     @Override
     public int compare(PersonSortable2 o1, PersonSortable2 o2) {
-        return Integer.compare(o1.age, o2.age);
+        return o1.age - o2.age;
     }
 }

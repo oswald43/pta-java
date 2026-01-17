@@ -5,12 +5,13 @@ import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         TreeSet<String> words = new TreeSet<>();
+
+        Scanner sc = new Scanner(System.in);
         while (sc.hasNext()) {
-            String next = sc.next();
-            if ("!!!!!".equals(next)) break;
-            words.add(next);
+            String word = sc.next();
+            if ("!!!!!".equals(word)) break;
+            words.add(word);
         }
 
         System.out.println(words.size());

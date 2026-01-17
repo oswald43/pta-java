@@ -6,18 +6,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] arr = new int[n];
+        int n = Integer.parseInt(sc.nextLine());
 
+        int[] nums = new int[n];
         int count = 0;
-        while (count < n) {
+        while ((count < n)) {
             try {
-                arr[count] = Integer.parseInt(sc.next());
+                nums[count] = Integer.parseInt(sc.next());
                 count++;
-            } catch (Exception e) {
+            } catch (NumberFormatException e) {
                 System.out.println(e);
             }
         }
-        System.out.println(Arrays.toString(arr));
+
+        System.out.println(Arrays.toString(nums));
     }
 }

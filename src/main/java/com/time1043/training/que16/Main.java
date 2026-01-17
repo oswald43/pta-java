@@ -19,7 +19,7 @@ public class Main {
                 .forEach(System.out::println);
 
         Person person = new Person();
-        System.out.printf("%s,%d,%b,%d\n", person.getName(), person.getAge(), person.isGender(), person.getId());
+        System.out.printf("%s,%d,%s,%d\n", person.getName(), person.getAge(), person.isGender(), person.getId());
         System.out.println(person);
     }
 }
@@ -37,7 +37,7 @@ class Person {
 
     {
         id = count++;
-        System.out.printf("This is initialization block, id is %d\n", id);
+        System.out.printf("This is initialization block, id is %s\n", id);
     }
 
     public Person() {
