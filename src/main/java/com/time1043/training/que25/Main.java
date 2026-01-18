@@ -7,26 +7,27 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        ArrayList<Person> people = new ArrayList<>();
+
         Scanner sc = new Scanner(System.in);
         int n = Integer.parseInt(sc.nextLine());
 
-        ArrayList<PersonSortable> people = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            people.add(new PersonSortable(sc.next(), sc.nextInt()));
+            people.add(new Person(sc.next(), sc.nextInt()));
         }
 
         Collections.sort(people);
         people.forEach(System.out::println);
 
-        System.out.println(Arrays.toString(PersonSortable.class.getInterfaces()));
+        System.out.println(Arrays.toString(Person.class.getInterfaces()));
     }
 }
 
-class PersonSortable implements Comparable<PersonSortable> {
+class Person implements Comparable<Person> {
     String name;
     int age;
 
-    public PersonSortable(String name, int age) {
+    public Person(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -37,7 +38,7 @@ class PersonSortable implements Comparable<PersonSortable> {
     }
 
     @Override
-    public int compareTo(PersonSortable o) {
+    public int compareTo(Person o) {
         // name
         int nameCompare = this.name.compareTo(o.name);
         if (nameCompare != 0) return nameCompare;

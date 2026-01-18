@@ -9,12 +9,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String[] words = sc.nextLine().split(" ");
 
-        // String wordMax = "";
-        // for (String word : words) {
-        //     if (wordMax.length() < word.length()) wordMax = word;
-        // }
-        // System.out.println(wordMax);
-
         Arrays.stream(words)
                 .sorted(Comparator.comparingInt(String::length).reversed())
                 .limit(1)

@@ -7,6 +7,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String word = sc.next();
         String wordReverse = new StringBuffer(word).reverse().toString();
-        System.out.println(wordReverse.equals(word) ? "yes" : "no");
+        System.out.println(word.equals(wordReverse) ? "yes" : "no");
     }
 }

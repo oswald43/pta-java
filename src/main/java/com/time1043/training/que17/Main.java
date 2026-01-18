@@ -7,6 +7,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int i = sc.nextInt();
         String score = sc.next();
+
         if (i == 1) System.out.println(String.join("\n", new String[]{
                 "now checking in",
                 "now starting",

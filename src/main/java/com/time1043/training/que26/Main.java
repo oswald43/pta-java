@@ -4,12 +4,13 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+        ArrayList<Person> people = new ArrayList<>();
+
         Scanner sc = new Scanner(System.in);
         int n = Integer.parseInt(sc.nextLine());
 
-        ArrayList<PersonSortable2> people = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            people.add(new PersonSortable2(sc.next(), sc.nextInt()));
+            people.add(new Person(sc.next(), sc.nextInt()));
         }
 
         System.out.println("NameComparator:sort");
@@ -24,11 +25,11 @@ public class Main {
     }
 }
 
-class PersonSortable2 {
+class Person {
     String name;
     int age;
 
-    public PersonSortable2(String name, int age) {
+    public Person(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -39,16 +40,16 @@ class PersonSortable2 {
     }
 }
 
-class NameComparator implements Comparator<PersonSortable2> {
+class NameComparator implements Comparator<Person> {
     @Override
-    public int compare(PersonSortable2 o1, PersonSortable2 o2) {
+    public int compare(Person o1, Person o2) {
         return o1.name.compareTo(o2.name);
     }
 }
 
-class AgeComparator implements Comparator<PersonSortable2> {
+class AgeComparator implements Comparator<Person> {
     @Override
-    public int compare(PersonSortable2 o1, PersonSortable2 o2) {
+    public int compare(Person o1, Person o2) {
         return o1.age - o2.age;
     }
 }

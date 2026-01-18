@@ -10,11 +10,11 @@ public class Main {
 
         int[] nums = new int[n];
         int count = 0;
-        while ((count < n)) {
+        while (count < n) {
             try {
-                nums[count] = Integer.parseInt(sc.next());
+                nums[count] = Integer.parseInt(sc.nextLine());
                 count++;
-            } catch (NumberFormatException e) {
+            } catch (Exception e) {
                 System.out.println(e);
             }
         }

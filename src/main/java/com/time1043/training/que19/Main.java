@@ -14,8 +14,8 @@ public class Main {
             idList[i] = sc.nextLine();
         }
 
-        while (true) {
-            String command = sc.nextLine();
+        while (sc.hasNext()) {
+            String command = sc.next();
             switch (command) {
                 case "sort1":
                     Arrays.stream(idList)
@@ -31,7 +31,7 @@ public class Main {
                     break;
                 default:
                     System.out.println("exit");
-                    return;
+                    break;
             }
         }
     }

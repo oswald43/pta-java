@@ -24,6 +24,6 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         sc.nextInt();
-        System.out.println(sc.hasNextInt() ? a + "\n\n" + b : a);
+        System.out.println(sc.hasNext() ? a + "\n\n" + b : a);
     }
 }

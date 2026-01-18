@@ -6,12 +6,15 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Person> people = new ArrayList<>();
-
         Scanner sc = new Scanner(System.in);
         int n = Integer.parseInt(sc.nextLine());
+
+        ArrayList<Person> people = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            people.add(new Person(sc.next(), sc.nextInt(), sc.nextBoolean()));
+            String name = sc.next();
+            int age = sc.nextInt();
+            boolean gender = sc.nextBoolean();
+            people.add(new Person(name, gender, age));
         }
 
         people.stream()
@@ -19,7 +22,7 @@ public class Main {
                 .forEach(System.out::println);
 
         Person person = new Person();
-        System.out.printf("%s,%d,%s,%d\n", person.getName(), person.getAge(), person.isGender(), person.getId());
+        System.out.printf("%s,%s,%s,%s\n", person.name, person.age, person.gender, person.id);
         System.out.println(person);
     }
 }
@@ -31,28 +34,28 @@ class Person {
     int id;
     static int count = 0;
 
+    {
+        id = count++;
+        System.out.printf("This is initialization block, id is %s\n", id);
+    }
+
     static {
         System.out.println("This is static initialization block");
     }
 
-    {
-        id = count++;
-        System.out.printf("This is initialization block, id is %s\n", id);
+    public Person(String name, boolean gender, int age) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
     }
 
     public Person() {
         System.out.println("This is constructor");
     }
 
-    public Person(String name, int age, boolean gender) {
-        this.name = name;
-        this.gender = gender;
-        this.age = age;
-    }
-
     @Override
     public String toString() {
-        return String.format("Person [name=%s, age=%d, gender=%s, id=%d]",
+        return String.format("Person [name=%s, age=%s, gender=%s, id=%s]",
                 name, age, gender, id);
     }
 

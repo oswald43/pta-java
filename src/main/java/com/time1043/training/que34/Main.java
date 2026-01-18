@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         try {
-            int n = sc.nextInt();
+            int n = Integer.parseInt(sc.nextLine());
             System.out.println(10 - n);
         } catch (Exception e) {
             System.out.println("not int");
